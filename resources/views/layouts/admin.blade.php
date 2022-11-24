@@ -35,26 +35,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('about') }}">{{ __('Kata Sambutan') }}</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('pengawas') }}">{{ __('Data Pengawas Jateng') }}</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('galery') }}">{{ __('Galery') }}</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>
-                        </li>
 
                         <!-- Authentication Links -->
                         @guest
@@ -85,12 +69,12 @@
             </div>
         </nav>
 
-        <main>
+        <main class="bg-light">
             @yield('content')
         </main>
 
         <!-- Copyright -->
-        <div class="text-center py-3 bg-white">© 2020 Copyright:
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="/">Commissioner Jateng</a>
         </div>
         <!-- Copyright -->
