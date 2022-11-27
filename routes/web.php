@@ -35,6 +35,11 @@ Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
             Route::get('/{id}/delete', 'Admin\KegiatanController@destroy')->name('destroy');
         });
     });
+
+    Route::prefix('pengumuman')->name('pengumuman.')->group(function () {
+        Route::get('/edit', 'Admin\PengumumanController@edit')->name('edit');
+        Route::put('/', 'Admin\PengumumanController@update')->name('update');
+    });
  });
 
 

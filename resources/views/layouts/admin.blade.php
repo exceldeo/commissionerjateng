@@ -7,7 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Commissioner Jateng | Admin</title>
+    <link rel="icon" href="{{ asset('images/picwish-1.png') }}">
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -39,7 +41,12 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="{{route('admin.pengumuman.edit')}}">Pengumuman</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="{{route('admin.pengawas.index')}}">pengawas</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item mx-2">
@@ -74,8 +81,8 @@
         </main>
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="/">Commissioner Jateng</a>
+        <div class="text-center py-3 bg-white">© 2022 Copyright:
+            <a href="/" class="text-dark text-decoration-none">PENGPROV PERBASI JAWA TENGAH Bid. SDM Pengawas Pertandingan AGUS WALUYO</a>
         </div>
         <!-- Copyright -->
     </div>

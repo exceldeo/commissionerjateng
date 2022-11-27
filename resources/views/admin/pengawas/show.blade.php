@@ -29,11 +29,12 @@
                         </div>
                         <div class="form-group">
                             <label>TTL</label>
-                            <input type="text" class="form-control" value="{{$pengawas->tempat_lahir}},{{$pengawas->tanggal_lahir}}" disabled>
+                            <input type="text" class="form-control" value="{{$pengawas->tempat_lahir}}, {{date('d-m-Y', strtotime($pengawas->tanggal_lahir))}}" disabled>
                         </div>
                         <div class="form-group">
-                            <label>No Lisensi</label>
+                            <label>No Lisensi (<a href="{{$pengawas->link_lisensi}}" target="_blank">link</a>)</label>
                             <input type="text" class="form-control" value="{{$pengawas->nomor_lisensi}}" disabled>
+                            
                         </div>
                         <div class="form-group">
                             <label>No Telepon</label>
@@ -49,11 +50,11 @@
                         </div>
                         <div class="form-group">
                             <label>Masa Berlaku Lisensi</label>
-                            <input type="text" class="form-control" value="{{$pengawas->masa_berlaku_lisensi}}" disabled>
+                            <input type="text" class="form-control" value="{{date('d-M-Y', strtotime($pengawas->masa_berlaku_lisensi))}}" disabled>
                         </div>
                     </div>
 
-                    <div class="my-3">
+                    <div class="my-5">
                         <div class="my-2">
                             <a href="{{route('admin.pengawas.kegiatan.create', ['idPengawas' => $pengawas->id])}}" class="btn btn-success"><i class="fa fa-plus"></i>Tambah Kegiatan</a>
                         </div>
@@ -73,11 +74,11 @@
                                 @foreach ($kegiatans as $item)
                                     <tr>
                                         <td>{{$loop->index+1}}</td>
-                                        <td>{{$item->nama_kegiatan}}</td>
+                                        <td><a href="{{$item->link_kegiatan}}" target="_blank">{{$item->nama_kegiatan}}</a></td>
                                         <td>{{$item->tingkat_daerah}}</td>
-                                        <td>{{$item->tanggal_mulai}}</td>
-                                        <td>{{$item->tanggal_selesai}}</td>
-                                        <td>{{$item->link_keterangan}}</td>
+                                        <td>{{date('d-m-Y', strtotime($item->tanggal_mulai))}}</td>
+                                        <td>{{date('d-m-Y', strtotime($item->tanggal_selesai))}}</td>
+                                        <td><a href="{{$item->link_keterangan}}" target="_blank">Surat Tugas</a></td>
                                         <td>
                                             <a href="{{route('admin.pengawas.kegiatan.destroy', ['id' => $item->id])}}"
                                                 onclick="return confirm('Apakah anda yakin?')">

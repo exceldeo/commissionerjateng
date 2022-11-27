@@ -7,10 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') | Commissioner Jateng</title>
+    <link rel="icon" href="{{ asset('images/picwish-1.png') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
    
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     @yield('style')
 </head>
 <body>
@@ -58,9 +59,9 @@
 
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item mx-2">
+                            <!-- <li class="nav-item mx-2">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                            </li> -->
                         @else
                             <li class="nav-item mx-2 dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -90,8 +91,8 @@
         </main>
 
         <!-- Copyright -->
-        <div class="text-center py-3 bg-white">© 2020 Copyright:
-            <a href="/">Commissioner Jateng</a>
+        <div class="text-center py-3 bg-white">© 2022 Copyright:
+            <a href="/" class="text-dark text-decoration-none">PENGPROV PERBASI JAWA TENGAH Bid. SDM Pengawas Pertandingan AGUS WALUYO</a>
         </div>
         <!-- Copyright -->
     </div>

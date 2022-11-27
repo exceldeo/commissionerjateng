@@ -34,12 +34,12 @@
                             @foreach ($pengawas as $item)
                                 <tr>
                                     <td>{{$item->nama}}</td>
-                                    <td>{{$item->tempat_lahir}},{{$item->tanggal_lahir}}</td>
-                                    <td>{{$item->nomor_lisensi}}</td>
+                                    <td>{{$item->tempat_lahir}}, {{date('d-m-Y', strtotime($item->tanggal_lahir))}}</td>
+                                    <td><a href="{{$item->link_lisensi}}" target="_blank">{{$item->nomor_lisensi}}</a></td>
                                     <td>{{$item->no_telp}}</td>
                                     <td>{{$item->pengkab_pengkot}}</td>
                                     <td>{{$item->lisensi_pengawas}}</td>
-                                    <td>{{$item->masa_berlaku_lisensi}}</td>
+                                    <td>{{date('d-M-Y', strtotime($item->masa_berlaku_lisensi))}}</td>
                                     <td>
                                         <a href="{{route('admin.pengawas.destroy', ['id' => $item->id])}}"
                                             onclick="return confirm('Apakah anda yakin?')">

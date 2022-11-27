@@ -111,7 +111,8 @@ class PengawasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pengawas = Pengawas::find($id);
+        return view('admin.pengawas.edit', compact('pengawas'));
     }
 
     /**
@@ -123,7 +124,55 @@ class PengawasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'no_lisensi' => 'required',
+            'link_lisensi' => 'required',
+            'no_telp' => 'required',
+            'pengkab_pengkot' => 'required',
+            'lisensi_pengawas' => 'required',
+            'masa_berlaku_lisensi' => 'required',
+        ]);
+        $pengawas = Pengawas::where('id',$id)->first();
+        
+        try {
+            $url = $pengawas->foto;
+            if ($request->hasFile('img')) {
+                if ($request->file('img')->isValid()) {
+                    $validated = $request->validate([
+                        'img' => 'mimes:jpeg,png|max:10240',
+                    ]);
+
+                    $file = $request->file('img');
+                    $url = Storage::putFileAs('public', $file, date("YmdHis") . '.' . $file->extension());
+                    $url  = strtok($url, 'public/');
+                    $url = $url.$file->extension();
+                }
+            }
+
+            Pengawas::where('id',$id)->update([
+                'nama' => $request->nama,
+                'tempat_lahir' => $request->tempat_lahir,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'nomor_lisensi' => $request->no_lisensi,
+                'link_lisensi' => $request->link_lisensi,
+                'no_telp' => $request->no_telp,
+                'pengkab_pengkot' => $request->pengkab_pengkot,
+                'lisensi_pengawas' => $request->lisensi_pengawas,
+                'masa_berlaku_lisensi' => $request->masa_berlaku_lisensi,            
+                'foto' => $url,
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
+            $message = ["success" => "Pengawas berhasil di ubah!"];
+
+        } catch (\Throwable $th) {
+            dd($th->getMessage());
+            $message = ["fail" => $th->getMessage()];
+        }
+
+        return redirect()->route('admin.pengawas.index')->with($message);
     }
 
     /**
@@ -134,6 +183,13 @@ class PengawasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            Pengawas::where('id', $id)->delete();
+            Kegiatan::where('id_pengawas', $id)->delete();
+            $message = ["success" => "Pengawas berhasil di hapus!"];
+        }catch(\Throwable $th){
+            $message = ["fail" => $th->getMessage()];
+        }
+        return redirect()->route('admin.pengawas.index')->with($message);
     }
 }
