@@ -18,7 +18,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-   
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('style')
@@ -42,10 +42,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{route('admin.pengumuman.edit')}}">Pengumuman</a>
+                            <a class="nav-link" href="{{route('admin.pengawas.index')}}">Pengawas</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{route('admin.pengawas.index')}}">pengawas</a>
+                            <a class="nav-link" href="{{route('admin.pengumuman.edit')}}">Pengumuman</a>
                         </li>
                         <!-- Authentication Links -->
                         @guest
