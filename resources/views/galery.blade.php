@@ -27,7 +27,7 @@
                 <div class="row" style="margin-top: 100px; margin-bottom: 100px;">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4 my-3">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 my-3">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 my-3">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -62,8 +62,12 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-4">
-                                FAQ
-                                Frequently Asked Questions
+                                <p class="font-weight-bold">
+                                    FAQ
+                                </p>
+                                <h1 class="display-3 font-weight-bold border-top border-dark mb-5">
+                                    Frequently Asked Questions
+                                </h1>
                             </div>
 
                             <div class="col-md-1"></div>
@@ -142,29 +146,29 @@
                 <div class="row" style="margin-top: 100px; margin-bottom: 100px;">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
-                            <div class="col-md-3">
-                                Gamabr
+                            <div class="col-md-3 text-center my-3">
+                                <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
                             </div>
                         </div>
                     </div>

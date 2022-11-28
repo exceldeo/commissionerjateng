@@ -8,16 +8,16 @@
         <div class="col-md-12">
             <div class="container h-50 bg-white p-5 shadow">
                 <div class="row">
-                    <div class="col-md-6 p-3 border-right border-dark d-flex align-items-center">
-                        <div>
+                    <div id="left-text" class="col-md-6 p-3 border-right border-dark d-flex align-items-center">
+                        <div id="text">
                             <h1 style="font-size: 2rem;">
                                 Selamat Datang di Website Pengawas Pertandingan Pengprov Perbasi Jawa Tengah
                             </h1>
                         </div>
                     </div>
-                    <div class="col-md-6 p-3 border-left border-dark d-flex align-items-center justify-content-center">
+                    <div id="right-text" class="col-md-6 p-3 border-left border-dark d-flex align-items-center justify-content-center">
                         <div>
-                            <img src="{{ asset('images/logo_01-dark.png') }}" class="img-fluid" alt="Responsive image">
+                            <img src="{{ asset('images/perbasi-2.png') }}" class="img-fluid" alt="Responsive image">
                         </div>
                     </div>
                 </div>
@@ -57,4 +57,28 @@
         }
     </script>
 @endif
+
+<script>
+    function contentStyle(x) {
+        if (x.matches) {
+            document.getElementById("left-text").classList.remove("border-right");
+            document.getElementById("right-text").classList.remove("border-left");
+            document.getElementById("left-text").classList.add("border-bottom");
+            document.getElementById("right-text").classList.add("border-top");
+
+            document.getElementById("text").classList.add("text-center");
+        } else {
+            document.getElementById("left-text").classList.remove("border-bottom");
+            document.getElementById("right-text").classList.remove("border-top");
+            document.getElementById("left-text").classList.add("border-right");
+            document.getElementById("right-text").classList.add("border-left");
+
+            document.getElementById("text").classList.remove("text-center");
+        }
+    }
+
+    var x = window.matchMedia("(max-width: 765px)")
+    contentStyle(x)
+    x.addListener(contentStyle)
+</script>
 @endsection

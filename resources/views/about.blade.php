@@ -8,7 +8,7 @@
         <div class="col-md-12 my-5">
             <div class="container bg-white p-5">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-6 my-3">
                         <h1 class="display-3 font-weight-bold mb-5">
                             Virtual Webinar Event on Digital Marketing
                         </h1>
@@ -18,10 +18,10 @@
                         <button type="button" class="btn btn-warning rounded-0 font-weight-bold px-4 py-3">GET YOUR TICKETS</button>
                     </div>
 
-                    <div class="col-md-1"></div>
+                    <div class="col-md-1 my-3"></div>
 
-                    <div class="col-md-4">
-                        Wire
+                    <div class="col-md-5 my-3">
+                        <img src="{{ asset('images/YUDHA_SAPUTRA1.jpg') }}" style="object-fit: none; object-position: center;" height="100%" width="100%" alt="Responsive image">
                     </div>
                 </div>
 
@@ -71,13 +71,13 @@
                 <div class="row" style="margin-top: 100px; margin-bottom: 100px;">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-4">
-                                Wire
+                            <div class="col-md-5 my-3">
+                                <img src="{{ asset('images/YUDHA_SAPUTRA1.jpg') }}" style="object-fit: none; object-position: center;" height="100%" width="100%" alt="Responsive image">
                             </div>
 
-                            <div class="col-md-1"></div>
+                            <div class="col-md-1 my-3"></div>
 
-                            <div class="col-md-7">
+                            <div class="col-md-6 my-3">
                                 <h1 class="display-4 font-weight-bold mb-5">
                                     Virtual Webinar Event on Digital Marketing
                                 </h1>
@@ -95,32 +95,32 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-3 py-3 text-center">
-                                        <h5 class="display-4 font-weight-bold">
+                                        <h3 class="display-4 font-weight-bold">
                                             100
-                                        </h5>
-                                        <h6 class="font-weight-bold">Events</h6>
+                                        </h3>
+                                        <h5 class="font-weight-bold">Events</h5>
                                     </div>
                                     <div class="col-md-3 py-3 text-center">
-                                        <h5 class="display-4 font-weight-bold">
+                                        <h3 class="display-4 font-weight-bold">
                                             100
-                                        </h5>
-                                        <h6 class="font-weight-bold">Events</h6>
+                                        </h3>
+                                        <h5 class="font-weight-bold">Events</h5>
                                     </div>
                                     <div class="col-md-3 py-3 text-center">
-                                        <h5 class="display-4 font-weight-bold">
+                                        <h3 class="display-4 font-weight-bold">
                                             100
-                                        </h5>
-                                        <h6 class="font-weight-bold">Events</h6>
+                                        </h3>
+                                        <h5 class="font-weight-bold">Events</h5>
                                     </div>
                                     <div class="col-md-3 py-3 text-center">
-                                        <h5 class="display-4 font-weight-bold">
+                                        <h3 class="display-4 font-weight-bold">
                                             100
-                                        </h5>
-                                        <h6 class="font-weight-bold">Events</h6>
+                                        </h3>
+                                        <h5 class="font-weight-bold">Events</h5>
                                     </div>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>

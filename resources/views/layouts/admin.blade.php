@@ -76,7 +76,7 @@
             </div>
         </nav>
 
-        <main class="bg-light">
+        <main>
             @yield('content')
         </main>
 
