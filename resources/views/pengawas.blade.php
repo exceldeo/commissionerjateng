@@ -70,30 +70,32 @@
                                                     <div class="row mt-3">
                                                         <div class="col-md-12">
                                                             <h5 class="font-weight-bold">Kegiatan</h5>
-                                                            <table id="example" class="table table-striped nowrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>No</th>
-                                                                        <th>Kegiatan</th>
-                                                                        <th>Nas/Daerah/Kab</th>
-                                                                        <th>Tanggal Mulai</th>
-                                                                        <th>Tanggal Selesai</th>
-                                                                        <th>Keterangan</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    @foreach ($item->kegiatan as $itemK)
+                                                            <div class="table-responsive">
+                                                                <table id="example" class="table table-striped nowrap">
+                                                                    <thead>
                                                                         <tr>
-                                                                            <td>{{$loop->index+1}}</td>
-                                                                            <td><a href="{{$itemK->link_kegiatan}}" target="_blank">{{$itemK->nama_kegiatan}}</a></td>
-                                                                            <td>{{$itemK->tingkat_daerah}}</td>
-                                                                            <td>{{date('d-m-Y', strtotime($itemK->tanggal_mulai))}}</td>
-                                                                            <td>{{date('d-m-Y', strtotime($itemK->tanggal_selesai))}}</td>
-                                                                            <td><a href="{{$itemK->link_keterangan}}" target="_blank">Surat Tugas</a></td>
+                                                                            <th>No</th>
+                                                                            <th>Kegiatan</th>
+                                                                            <th>Nas/Daerah/Kab</th>
+                                                                            <th>Tanggal Mulai</th>
+                                                                            <th>Tanggal Selesai</th>
+                                                                            <th>Keterangan</th>
                                                                         </tr>
-                                                                    @endforeach
-                                                                </tbody>
-                                                            </table>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach ($item->kegiatan as $itemK)
+                                                                            <tr>
+                                                                                <td>{{$loop->index+1}}</td>
+                                                                                <td><a href="{{$itemK->link_kegiatan}}" target="_blank">{{$itemK->nama_kegiatan}}</a></td>
+                                                                                <td>{{$itemK->tingkat_daerah}}</td>
+                                                                                <td>{{date('d-m-Y', strtotime($itemK->tanggal_mulai))}}</td>
+                                                                                <td>{{date('d-m-Y', strtotime($itemK->tanggal_selesai))}}</td>
+                                                                                <td><a href="{{$itemK->link_keterangan}}" target="_blank">Surat Tugas</a></td>
+                                                                            </tr>
+                                                                        @endforeach
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

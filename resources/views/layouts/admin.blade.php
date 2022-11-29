@@ -45,6 +45,9 @@
                             <a class="nav-link" href="{{route('admin.pengawas.index')}}">Pengawas</a>
                         </li>
                         <li class="nav-item mx-2">
+                            <a class="nav-link" href="{{route('admin.galery.index')}}">Galery</a>
+                        </li>
+                        <li class="nav-item mx-2">
                             <a class="nav-link" href="{{route('admin.pengumuman.edit')}}">Pengumuman</a>
                         </li>
                         <!-- Authentication Links -->
