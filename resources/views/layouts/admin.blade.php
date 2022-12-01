@@ -42,22 +42,25 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{route('admin.pengawas.index')}}">Pengawas</a>
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('admin.pengawas.index') || Route::currentRouteNamed('admin.pengawas.create') || Route::currentRouteNamed('admin.pengawas.show') || Route::currentRouteNamed('admin.pengawas.edit') || Route::currentRouteNamed('admin.pengawas.kegiatan.create') ? 'active text-primary' : '' }}"
+                                href="{{route('admin.pengawas.index')}}">
+                                Pengawas
+                            </a>
                         </li>
+                        {{-- <li class="nav-item mx-2">
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('admin.galery') ? 'active text-primary' : '' }}" href="{{route('admin.galery.index')}}">Galery</a>
+                        </li> --}}
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{route('admin.galery.index')}}">Galery</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{route('admin.pengumuman.edit')}}">Pengumuman</a>
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('admin.pengumuman.edit') ? 'active text-primary' : '' }}" href="{{route('admin.pengumuman.edit')}}">Pengumuman</a>
                         </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="font-weight-bold nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                         @else
                             <li class="nav-item mx-2 dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="font-weight-bold nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -84,7 +87,7 @@
         </main>
 
         <!-- Copyright -->
-        <div class="text-center py-3 bg-white">© 2022 Copyright:
+        <div class="font-weight-bold text-center py-3 bg-white">© 2022 Copyright:
             <a href="/" class="text-dark text-decoration-none">PENGPROV PERBASI JAWA TENGAH Bid. SDM Pengawas Pertandingan AGUS WALUYO</a>
         </div>
         <!-- Copyright -->

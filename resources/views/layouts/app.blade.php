@@ -17,7 +17,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-   
+
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     @yield('style')
@@ -42,19 +42,19 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('home') ? 'active text-primary' : '' }}" href="{{ route('home') }}">{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('about') }}">{{ __('Kata Sambutan') }}</a>
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('about') ? 'active text-primary' : '' }}" href="{{ route('about') }}">{{ __('Kata Sambutan') }}</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('pengawas') }}">{{ __('Data Pengawas Jateng') }}</a>
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('pengawas') ? 'active text-primary' : '' }}" href="{{ route('pengawas') }}">{{ __('Data Pengawas Jateng') }}</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('galery') }}">{{ __('Galery') }}</a>
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('galery') ? 'active text-primary' : '' }}" href="{{ route('galery') }}">{{ __('Galery') }}</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('contact') ? 'active text-primary' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
                         </li>
 
                         <!-- Authentication Links -->
@@ -64,7 +64,7 @@
                             </li> -->
                         @else
                             <li class="nav-item mx-2 dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="font-weight-bold nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -91,7 +91,7 @@
         </main>
 
         <!-- Copyright -->
-        <div class="text-center py-3 bg-white">© 2022 Copyright:
+        <div class="font-weight-bold text-center py-3 bg-white">© 2022 Copyright:
             <a href="/" class="text-dark text-decoration-none">PENGPROV PERBASI JAWA TENGAH Bid. SDM Pengawas Pertandingan AGUS WALUYO</a>
         </div>
         <!-- Copyright -->
