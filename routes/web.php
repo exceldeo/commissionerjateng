@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/about','PagesController@about')->name('about');
-Route::get('/galery','PagesController@galery')->name('galery');
+// Route::get('/galery','PagesController@galery')->name('galery');
 Route::get('/pengawas','PagesController@pengawas')->name('pengawas');
 Route::get('/contact','PagesController@contact')->name('contact');
 
@@ -36,13 +36,13 @@ Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
         });
     });
 
-    Route::prefix('galery')->name('galery.')->group(function () {
-        Route::get('/', 'Admin\GaleryController@index')->name('index');
-        Route::get('/create', 'Admin\GaleryController@create')->name('create');
-        Route::post('/', 'Admin\GaleryController@store')->name('store');
-        Route::get('/{id}', 'Admin\GaleryController@show')->name('show');
-        Route::get('/{id}/delete', 'Admin\GaleryController@destroy')->name('destroy');
-    });
+    // Route::prefix('galery')->name('galery.')->group(function () {
+    //     Route::get('/', 'Admin\GaleryController@index')->name('index');
+    //     Route::get('/create', 'Admin\GaleryController@create')->name('create');
+    //     Route::post('/', 'Admin\GaleryController@store')->name('store');
+    //     Route::get('/{id}', 'Admin\GaleryController@show')->name('show');
+    //     Route::get('/{id}/delete', 'Admin\GaleryController@destroy')->name('destroy');
+    // });
 
     Route::prefix('pengumuman')->name('pengumuman.')->group(function () {
         Route::get('/edit', 'Admin\PengumumanController@edit')->name('edit');

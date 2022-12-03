@@ -50,9 +50,9 @@
                         <li class="nav-item mx-2">
                             <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('pengawas') ? 'active text-primary' : '' }}" href="{{ route('pengawas') }}">{{ __('Data Pengawas Jateng') }}</a>
                         </li>
-                        <li class="nav-item mx-2">
+                        {{-- <li class="nav-item mx-2">
                             <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('galery') ? 'active text-primary' : '' }}" href="{{ route('galery') }}">{{ __('Galery') }}</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item mx-2">
                             <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('contact') ? 'active text-primary' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
                         </li>

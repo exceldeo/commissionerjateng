@@ -17,20 +17,26 @@
                             <div class="col-md-1 my-3"></div>
 
                             <div class="col-md-6 my-3">
-                                <h1 class="display-4 font-weight-bold mb-5">
-                                    GET IN TOUCH
+                                <h1 class="display-4 font-weight-bold">
+                                    Kontak Kami
                                 </h1>
-                                <p class="my-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam facere provident veniam quibusdam quo, doloremque quidem vel impedit distinctio inventore, maiores, odit error atque quia quasi! Exercitationem, quam velit voluptates doloribus doloremque similique tempore. Blanditiis natus odio sunt, aliquid laudantium, harum assumenda autem eveniet qui quibusdam, alias reprehenderit dignissimos vel?
+                                <p class="my-4">
+                                    Apabila ada keperluan, Anda dapat menghubungi kami melalui:
                                 </p>
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        Test :
-                                    </div>
-                                    <div class="col-md-10">
-                                        Test
-                                    </div>
-                                </div>
+                                <p>
+                                    <b>Alamat</b> <br>
+                                    Komplek Puri Niaga Center Blok DD 5/12 <br>
+                                    Jl. Puri Anjasmoro Semarang <br><br>
+
+                                    <b>Telp</b> <br>
+                                    (024) 7617187 <br><br>
+
+                                    <b>Fax</b> <br>
+                                    (024) 7626796 <br><br>
+
+                                    <b>Email</b> <br>
+                                    jatengperbasi@gmail.com <br><br>
+                                </p>
                             </div>
                         </div>
                     </div>
