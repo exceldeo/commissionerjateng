@@ -146,9 +146,9 @@ class PengawasController extends Controller
                     ]);
 
                     $file = $request->file('img');
-                    $url = Storage::putFileAs('public', $file, date("YmdHis") . '.' . $file->extension());
-                    $url  = strtok($url, 'public/');
-                    $url = $url.$file->extension();
+                    $nameFile = date("YmdHis") . '.' . $file->extension();
+                    $url = Storage::putFileAs('public', $file, $nameFile );
+                    $url = $nameFile;
                 }
             }
 
