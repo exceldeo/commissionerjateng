@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Pengawas;
 use App\Kegiatan;
 use App\Content;
+use App\Contact;
 
 class PagesController extends Controller
 {
@@ -23,7 +24,7 @@ class PagesController extends Controller
     }
 
     public function pengawas(){
-        $pengawas = Pengawas::all();
+        $pengawas = Pengawas::all()->sortBy('nama');
         foreach($pengawas as $p){
             $p["kegiatan"] = Kegiatan::where('id_pengawas', $p->id)->get();
         }
@@ -31,6 +32,7 @@ class PagesController extends Controller
     }
 
     public function contact(){
-        return view('contact');
+        $contact = Contact::find(1);
+        return view('contact', compact('contact'));
     }
 }

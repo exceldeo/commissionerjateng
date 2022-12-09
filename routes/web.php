@@ -48,6 +48,11 @@ Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
         Route::get('/edit', 'Admin\PengumumanController@edit')->name('edit');
         Route::put('/', 'Admin\PengumumanController@update')->name('update');
     });
+
+    Route::prefix('contact')->name('contact.')->group(function () {
+        Route::get('/edit', 'Admin\ContactController@edit')->name('edit');
+        Route::put('/', 'Admin\ContactController@update')->name('update');
+    });
  });
 
 

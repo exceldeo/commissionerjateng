@@ -29,8 +29,12 @@
                     <input required type="text" class="form-control" id="nama_kegiatan" name="nama_kegiatan" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="link_kegiatan">Link Kegiatan</label>
-                    <input required type="text" class="form-control" id="link_kegiatan" name="link_kegiatan" autocomplete="off">
+                    <label for="link_kegiatan">Link Laporan</label>
+                    <input type="text" class="form-control" id="link_kegiatan" name="link_kegiatan" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="tanggal_masuk_laporan">Tanggal Masuk Laporan</label>
+                    <input required type="date" class="form-control" id="tanggal_masuk_laporan" name="tanggal_masuk_laporan" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="tingkat_daerah">Tingkat Daerah</label>

@@ -67,6 +67,7 @@
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
                                     <th>Keterangan</th>
+                                    <th>Tanggal Masuk Laporan</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -78,6 +79,7 @@
                                         <td>{{$item->tingkat_daerah}}</td>
                                         <td>{{date('d-m-Y', strtotime($item->tanggal_mulai))}}</td>
                                         <td>{{date('d-m-Y', strtotime($item->tanggal_selesai))}}</td>
+                                        <td>{{date('d-m-Y', strtotime($item->tanggal_masuk_laporan))}}</td>
                                         <td><a href="{{$item->link_keterangan}}" target="_blank">Surat Tugas</a></td>
                                         <td>
                                             <a href="{{route('admin.pengawas.kegiatan.destroy', ['id' => $item->id])}}"

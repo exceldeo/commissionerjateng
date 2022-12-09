@@ -79,6 +79,7 @@
                                                                             <th>Nas/Daerah/Kab</th>
                                                                             <th>Tanggal Mulai</th>
                                                                             <th>Tanggal Selesai</th>
+                                                                            <th>Tanggal Masuk Laporan</th>
                                                                             <th>Keterangan</th>
                                                                         </tr>
                                                                     </thead>
@@ -90,6 +91,7 @@
                                                                                 <td>{{$itemK->tingkat_daerah}}</td>
                                                                                 <td>{{date('d-m-Y', strtotime($itemK->tanggal_mulai))}}</td>
                                                                                 <td>{{date('d-m-Y', strtotime($itemK->tanggal_selesai))}}</td>
+                                                                                <td>{{date('d-m-Y', strtotime($item->tanggal_masuk_laporan))}}</td>
                                                                                 <td><a href="{{$itemK->link_keterangan}}" target="_blank">Surat Tugas</a></td>
                                                                             </tr>
                                                                         @endforeach

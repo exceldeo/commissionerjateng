@@ -47,6 +47,9 @@
                                 Pengawas
                             </a>
                         </li>
+                        <li class="nav-item mx-2">
+                            <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('admin.contact.edit') ? 'active text-primary' : '' }}" href="{{route('admin.contact.edit')}}">Contact</a>
+                        </li>
                         {{-- <li class="nav-item mx-2">
                             <a class="font-weight-bold nav-link {{ Route::currentRouteNamed('admin.galery') ? 'active text-primary' : '' }}" href="{{route('admin.galery.index')}}">Galery</a>
                         </li> --}}

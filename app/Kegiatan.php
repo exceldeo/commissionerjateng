@@ -13,6 +13,7 @@ class Kegiatan extends Model
         'tanggal_mulai',
         'tanggal_selesai',
         'link_keterangan',
-        'id_pengawas'
+        'id_pengawas',
+        'tanggal_masuk_laporan',
     ];
 }
