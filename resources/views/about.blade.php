@@ -2,32 +2,46 @@
 
 @section('title', 'About')
 
+@section('style')
+<style>
+    @media only screen and (max-width: 400px) {
+        .title {
+            font-size: 2.5rem !important;
+        }
+    }
+
+    @media only screen and (min-width: 401px) and (max-width: 600px) {
+        .title {
+            font-size: 4rem !important;
+        }
+    }
+</style>
+@endsection
+
 @section('content')
 <div class="container-fluid" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bg-img.png'); background-repeat: repeat; background-size: 100vw;">
     <div class="row">
-        <div class="col-md-12 my-5">
+        <div class="col-lg-12 my-5">
             <div class="container bg-white p-5">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 class="display-3 font-weight-bold mb-5">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="title display-3 font-weight-bold mb-5">
                             Kata Sambutan
                         </h1>
                         <div class="row justify-content-center mb-5">
-                            <div class="col-md-2 border-bottom border-dark"></div>
+                            <div class="col-lg-2 border-bottom border-dark"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row" style="margin-bottom: 100px;">
-                    <div class="col-md-3 my-3">
+                    <div class="col-lg-4 my-3">
                         <div>
-                            <img src="{{ asset('images/1.PNG') }}" width="300px" alt="Responsive image">
+                            <img src="{{ asset('images/1.jpeg') }}" class="img-fluid" alt="Responsive image">
                         </div>
                     </div>
 
-                    <div class="col-md-1 my-3"></div>
-
-                    <div class="col-md-8 my-3">
+                    <div class="col-lg-8 my-3">
                         <h1 class="display-6 font-weight-bold mb-5">
                             Sambutan Ketua Umum Pengurus Provinsi Perbasi Jawa Tengah
                         </h1>
@@ -69,9 +83,9 @@
                 </div>
 
                 {{-- <div class="row" style="margin-top: 100px; margin-bottom: 100px;">
-                    <div class="col-md-12">
+                    <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-md-3 my-3">
+                            <div class="col-lg-3 my-3">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -80,7 +94,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 my-3">
+                            <div class="col-lg-3 my-3">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -89,7 +103,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 my-3">
+                            <div class="col-lg-3 my-3">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -98,7 +112,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 my-3">
+                            <div class="col-lg-3 my-3">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -112,15 +126,15 @@
                 </div>
 
                 <div class="row" style="margin-top: 100px; margin-bottom: 100px;">
-                    <div class="col-md-12">
+                    <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-md-5 my-3">
+                            <div class="col-lg-5 my-3">
                                 <img src="{{ asset('images/YUDHA_SAPUTRA1.jpg') }}" style="object-fit: none; object-position: center;" height="100%" width="100%" alt="Responsive image">
                             </div>
 
-                            <div class="col-md-1 my-3"></div>
+                            <div class="col-lg-1 my-3"></div>
 
-                            <div class="col-md-6 my-3">
+                            <div class="col-lg-6 my-3">
                                 <h1 class="display-4 font-weight-bold mb-5">
                                     Virtual Webinar Event on Digital Marketing
                                 </h1>
@@ -133,29 +147,29 @@
                 </div>
 
                 <div class="row" style="margin-top: 100px; margin-bottom: 100px;">
-                    <div class="col-md-12 bg-warning">
+                    <div class="col-lg-12 bg-warning">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-lg-12">
                                 <div class="row">
-                                    <div class="col-md-3 py-3 text-center">
+                                    <div class="col-lg-3 py-3 text-center">
                                         <h3 class="display-4 font-weight-bold">
                                             100
                                         </h3>
                                         <h5 class="font-weight-bold">Events</h5>
                                     </div>
-                                    <div class="col-md-3 py-3 text-center">
+                                    <div class="col-lg-3 py-3 text-center">
                                         <h3 class="display-4 font-weight-bold">
                                             100
                                         </h3>
                                         <h5 class="font-weight-bold">Events</h5>
                                     </div>
-                                    <div class="col-md-3 py-3 text-center">
+                                    <div class="col-lg-3 py-3 text-center">
                                         <h3 class="display-4 font-weight-bold">
                                             100
                                         </h3>
                                         <h5 class="font-weight-bold">Events</h5>
                                     </div>
-                                    <div class="col-md-3 py-3 text-center">
+                                    <div class="col-lg-3 py-3 text-center">
                                         <h3 class="display-4 font-weight-bold">
                                             100
                                         </h3>

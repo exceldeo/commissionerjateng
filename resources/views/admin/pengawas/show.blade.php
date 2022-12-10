@@ -11,7 +11,7 @@
 @section('content')
 <div class="container-fluid my-5">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
                     <div class="my-3">
@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label>No Lisensi (<a href="{{$pengawas->link_lisensi}}" target="_blank">link</a>)</label>
                             <input type="text" class="form-control" value="{{$pengawas->nomor_lisensi}}" disabled>
-                            
+
                         </div>
                         <div class="form-group">
                             <label>No Telepon</label>
@@ -66,8 +66,8 @@
                                     <th>Nas/Daerah/Kab</th>
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
-                                    <th>Keterangan</th>
                                     <th>Tanggal Masuk Laporan</th>
+                                    <th>Keterangan</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -79,7 +79,11 @@
                                         <td>{{$item->tingkat_daerah}}</td>
                                         <td>{{date('d-m-Y', strtotime($item->tanggal_mulai))}}</td>
                                         <td>{{date('d-m-Y', strtotime($item->tanggal_selesai))}}</td>
-                                        <td>{{date('d-m-Y', strtotime($item->tanggal_masuk_laporan))}}</td>
+                                        <td>
+                                            @if (!empty($item->tanggal_masuk_laporan))
+                                                {{date('d-m-Y', strtotime($item->tanggal_masuk_laporan))}}
+                                            @endif
+                                        </td>
                                         <td><a href="{{$item->link_keterangan}}" target="_blank">Surat Tugas</a></td>
                                         <td>
                                             <a href="{{route('admin.pengawas.kegiatan.destroy', ['id' => $item->id])}}"

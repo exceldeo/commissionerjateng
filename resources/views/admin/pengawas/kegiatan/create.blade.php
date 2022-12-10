@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label for="tanggal_masuk_laporan">Tanggal Masuk Laporan</label>
-                    <input required type="date" class="form-control" id="tanggal_masuk_laporan" name="tanggal_masuk_laporan" autocomplete="off">
+                    <input type="date" class="form-control" id="tanggal_masuk_laporan" name="tanggal_masuk_laporan" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="tingkat_daerah">Tingkat Daerah</label>

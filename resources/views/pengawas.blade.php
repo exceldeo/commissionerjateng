@@ -2,16 +2,32 @@
 
 @section('title', 'Pengawas')
 
+@section('style')
+<style>
+    @media only screen and (max-width: 400px) {
+        .title {
+            font-size: 2.5rem !important;
+        }
+    }
+
+    @media only screen and (min-width: 401px) and (max-width: 600px) {
+        .title {
+            font-size: 4rem !important;
+        }
+    }
+</style>
+@endsection
+
 @section('content')
 <div class="container-fluid" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bg-img.png'); background-repeat: repeat; background-size: 100vw;">
     <div class="row">
-        <div class="col-md-12 my-5">
+        <div class="col-lg-12 my-5">
             <div class="container bg-white p-5">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h1 class="display-3 font-weight-bold mb-5">
+                            <div class="col-lg-12 text-center">
+                                <h1 class="title display-3 font-weight-bold mb-5">
                                     Data Pengawas
                                 </h1>
                             </div>
@@ -19,7 +35,7 @@
 
                         <div class="row my-5">
                             @foreach ($pengawas as $item)
-                                <div class="col-md-4 my-3">
+                                <div class="col-lg-4 my-3">
                                     <a role="button" data-toggle="modal" data-target="#exampleModalCenter{{$item->id}}">
                                         <div class="card">
                                             <img style="width: 100%; height: 15vw; object-fit: cover;" src="{{asset('storage/'.$item->foto)}}" alt="Card image cap" height="300px">
@@ -49,10 +65,10 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="row">
-                                                        <div class="col-md-4">
+                                                        <div class="col-lg-4">
                                                             <img src="{{asset('storage/'.$item->foto)}}" alt="" class="img-fluid">
                                                         </div>
-                                                        <div class="col-md-8">
+                                                        <div class="col-lg-8">
                                                             <h5 class="font-weight-bold">{{$item->nama}}</h5>
                                                             <p>
                                                                 Nomor Lisensi : <a href="{{$item->link_lisensi}}" target="_blank">{{$item->nomor_lisensi}}</a>
@@ -68,7 +84,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="row mt-3">
-                                                        <div class="col-md-12">
+                                                        <div class="col-lg-12">
                                                             <h5 class="font-weight-bold">Kegiatan</h5>
                                                             <div class="table-responsive">
                                                                 <table id="example" class="table table-striped nowrap">
@@ -91,7 +107,11 @@
                                                                                 <td>{{$itemK->tingkat_daerah}}</td>
                                                                                 <td>{{date('d-m-Y', strtotime($itemK->tanggal_mulai))}}</td>
                                                                                 <td>{{date('d-m-Y', strtotime($itemK->tanggal_selesai))}}</td>
-                                                                                <td>{{date('d-m-Y', strtotime($item->tanggal_masuk_laporan))}}</td>
+                                                                                <td>
+                                                                                    @if (!empty($itemK->tanggal_masuk_laporan))
+                                                                                        {{date('d-m-Y', strtotime($itemK->tanggal_masuk_laporan))}}
+                                                                                    @endif
+                                                                                </td>
                                                                                 <td><a href="{{$itemK->link_keterangan}}" target="_blank">Surat Tugas</a></td>
                                                                             </tr>
                                                                         @endforeach

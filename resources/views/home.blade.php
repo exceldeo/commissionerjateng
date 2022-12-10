@@ -5,7 +5,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="row" style="background-color: #BD1B2A">
-        <div class="col-md-12 p-2">
+        <div class="col-lg-12 p-2">
             <marquee behavior="" direction="">
                 <span class="h4 text-white">
                     Selamat Datang di Website Pengawas Pertandingan Pengprov Perbasi Jawa Tengah

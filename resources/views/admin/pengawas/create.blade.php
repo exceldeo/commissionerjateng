@@ -26,7 +26,7 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="image">Foto</label>
-                    <input type="file" class="form-control" id="image" name="img" autocomplete="off">
+                    <input type="file" class="form-control-file" id="image" name="img" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="nama">Nama</label>

@@ -25,19 +25,19 @@
 
                                 <div class="form-group">
                                     <label for="alamat">Alamat</label>
-                                    <textarea value="{{$contact->alamat}}" type="text" class="form-control" id="alamat" name="alamat" autocomplete="off">{{$contact->alamat}}</textarea>
+                                    <textarea value="{{!empty($contact->alamat) ? $contact->alamat : ''}}" type="text" class="form-control" id="alamat" name="alamat" autocomplete="off">{{!empty($contact->alamat) ? $contact->alamat : ''}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="telepon">Telp</label>
-                                    <textarea value="{{$contact->telepon}}" type="text" class="form-control" id="telepon" name="telepon" autocomplete="off">{{$contact->telepon}}</textarea>
+                                    <textarea value="{{!empty($contact->telepon) ? $contact->telepon : ''}}" type="text" class="form-control" id="telepon" name="telepon" autocomplete="off">{{!empty($contact->telepon) ? $contact->telepon : ''}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="fax">Fax</label>
-                                    <textarea value="{{$contact->fax}}" type="text" class="form-control" id="fax" name="fax" autocomplete="off">{{$contact->fax}}</textarea>
+                                    <textarea value="{{!empty($contact->fax) ? $contact->fax : ''}}" type="text" class="form-control" id="fax" name="fax" autocomplete="off">{{!empty($contact->fax) ? $contact->fax : ''}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <textarea value="{{$contact->email}}" type="text" class="form-control" id="email" name="email" autocomplete="off">{{$contact->email}}</textarea>
+                                    <textarea value="{{!empty($contact->email) ? $contact->email : ''}}" type="text" class="form-control" id="email" name="email" autocomplete="off">{{!empty($contact->email) ? $contact->email : ''}}</textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="margin-top:10px">Simpan</button>
                             </form>

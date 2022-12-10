@@ -14,7 +14,7 @@ class AddTanggalMasukLaporan extends Migration
     public function up()
     {
         Schema::table('kegiatans', function (Blueprint $table) {
-            $table->date('tanggal_masuk_laporan')->after('link_keterangan');
+            $table->date('tanggal_masuk_laporan')->nullable()->after('link_keterangan');
         });
     }
 
