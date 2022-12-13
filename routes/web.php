@@ -32,6 +32,8 @@ Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
         Route::prefix('kegiatan')->name('kegiatan.')->group(function () {
             Route::get('/{idPengawas}/create', 'Admin\KegiatanController@create')->name('create');
             Route::post('/{idPengawas}', 'Admin\KegiatanController@store')->name('store');
+            Route::get('/{idPengawas}/{id}/edit', 'Admin\KegiatanController@edit')->name('edit');
+            Route::put('/{idPengawas}/{id}', 'Admin\KegiatanController@update')->name('update');
             Route::get('/{id}/delete', 'Admin\KegiatanController@destroy')->name('destroy');
         });
     });

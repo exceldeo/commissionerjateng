@@ -82,6 +82,8 @@
                                         <td>
                                             @if (!empty($item->tanggal_masuk_laporan))
                                                 {{date('d-m-Y', strtotime($item->tanggal_masuk_laporan))}}
+                                            @else
+                                                -
                                             @endif
                                         </td>
                                         <td><a href="{{$item->link_keterangan}}" target="_blank">Surat Tugas</a></td>
@@ -90,6 +92,10 @@
                                                 onclick="return confirm('Apakah anda yakin?')">
                                                 <button class="btn btn-sm btn-danger pull-right mr-3"><i
                                                         class="fa fa-trash mr-1"></i> Hapus</button>
+                                            </a>
+                                            <a href="{{route('admin.pengawas.kegiatan.edit', ['id' => $item->id, 'idPengawas' => $pengawas->id])}}">
+                                                <button class="btn btn-sm btn-warning pull-right mr-3 text-white"><i
+                                                        class="fa fa-pencil mr-1"></i> Edit</button>
                                             </a>
                                         </td>
                                     </tr>

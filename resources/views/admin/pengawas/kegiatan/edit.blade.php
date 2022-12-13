@@ -17,44 +17,58 @@
                     </a>
                 </div>
                 <div class="col-11">
-                    <h3 class="panel-title">Tambah Kegiatan Pengawas</h3>
+                    <h3 class="panel-title">Edit Kegiatan Pengawas</h3>
                 </div>
             </div>
         </div>
         <div class="panel-body py-3">
-            <form action="{{route('admin.pengawas.kegiatan.store',['idPengawas' => $idPengawas])}}" method="POST">
+            <form action="{{route('admin.pengawas.kegiatan.update',['idPengawas' => $idPengawas, 'id' => $kegiatan->id])}}" method="POST">
                 {{ csrf_field() }}
+                @method('PUT')
                 <div class="form-group">
                     <label for="nama_kegiatan">Nama Kegiatan</label>
-                    <input required type="text" class="form-control" id="nama_kegiatan" name="nama_kegiatan" autocomplete="off">
+                    <input value="{{$kegiatan->nama_kegiatan}}" required type="text" class="form-control" id="nama_kegiatan" name="nama_kegiatan" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="link_kegiatan">Link Laporan</label>
-                    <input type="text" class="form-control" id="link_kegiatan" name="link_kegiatan" autocomplete="off">
+                    <input value="{{$kegiatan->link_kegiatan}}" type="text" class="form-control" id="link_kegiatan" name="link_kegiatan" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="tanggal_masuk_laporan">Tanggal Masuk Laporan</label>
-                    <input disabled type="date" class="form-control" id="tanggal_masuk_laporan" name="tanggal_masuk_laporan" autocomplete="off">
+                    <input
+                    {{ $kegiatan->tanggal_masuk_lapor ? '' : 'disabled' }}}
+                    @if($kegiatan->tanggal_masuk_laporan)
+                        value="{{$kegiatan->tanggal_masuk_laporan}}"
+                    @else     
+                        disabled
+                    @endif
+                    type="date" class="form-control" id="tanggal_masuk_laporan" name="tanggal_masuk_laporan" autocomplete="off">
                     <input type="checkbox" id="masuk_laporan" name="masuk_laporan" 
-                    checked="checked" value="1"
+                    @if(!$kegiatan->tanggal_masuk_laporan)
+                        checked
+                        value="1"
+                    @else 
+                        unchecked
+                        value="0"
+                    @endif
                     onclick="diabledTanggalMasukLaporan()">
                     <label for="masuk_laporan">Check untuk tidak memakai tanggal masuk laporan</label>  
                 </div>
                 <div class="form-group">
                     <label for="tingkat_daerah">Tingkat Daerah</label>
-                    <input required type="text" class="form-control" id="tingkat_daerah" name="tingkat_daerah" autocomplete="off">
+                    <input value="{{$kegiatan->tingkat_daerah}}" required type="text" class="form-control" id="tingkat_daerah" name="tingkat_daerah" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="tanggal_mulai">Tanggal Mulai</label>
-                    <input required type="date" class="form-control" id="tanggal_mulai" name="tanggal_mulai" autocomplete="off">
+                    <input value="{{$kegiatan->tanggal_mulai}}" required type="date" class="form-control" id="tanggal_mulai" name="tanggal_mulai" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="tanggal_selesai">Tanggal Selesai</label>
-                    <input required type="date" class="form-control" id="tanggal_selesai" name="tanggal_selesai" autocomplete="off">
+                    <input value="{{$kegiatan->tanggal_selesai}}" required type="date" class="form-control" id="tanggal_selesai" name="tanggal_selesai" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="link_keterangan">Link Surat Keterangan</label>
-                    <input required type="text" class="form-control" id="link_keterangan" name="link_keterangan" autocomplete="off">
+                    <input value="{{$kegiatan->link_keterangan}}" required type="text" class="form-control" id="link_keterangan" name="link_keterangan" autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-primary" style="margin-top:10px">Simpan</button>
             </form>
@@ -76,3 +90,4 @@
         }
     </script>
 @endsection
+
